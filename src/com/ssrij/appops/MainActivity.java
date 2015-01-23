@@ -43,6 +43,7 @@ public class MainActivity extends PreferenceActivity {
 	    }
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void ShowAbout() {
         AlertDialog alertDialog1 = new AlertDialog.Builder(this).create();
         alertDialog1.setTitle("About");

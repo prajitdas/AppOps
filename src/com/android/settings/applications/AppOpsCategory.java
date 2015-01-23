@@ -376,4 +376,8 @@ public class AppOpsCategory extends ListFragment implements
         // Clear the data in the adapter.
         mAdapter.setData(null);
     }
+
+	public static int getResultAppDetails() {
+		return RESULT_APP_DETAILS;
+	}
 }
