@@ -1,6 +1,8 @@
 package com.ssrij.appops;
 
 import android.app.AlertDialog;
+import android.app.AppOpsManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
@@ -11,10 +13,24 @@ import android.view.MenuItem;
 import com.android.settings.applications.AppOpsSummary;
 
 public class MainActivity extends PreferenceActivity {
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		final AppOpsManager mAppOps = (AppOpsManager) this.getSystemService(Context.APP_OPS_SERVICE);
+
+		//Setting hardcoded permissions
+		mAppOps.setMode(AppOpsManager.OP_COARSE_LOCATION, 10123, "com.facebook.katana", AppOpsManager.MODE_IGNORED);
+		mAppOps.setMode(AppOpsManager.OP_FINE_LOCATION, 10123, "com.facebook.katana", AppOpsManager.MODE_IGNORED);
+		mAppOps.setMode(AppOpsManager.OP_GPS, 10123, "com.facebook.katana", AppOpsManager.MODE_IGNORED);
+		mAppOps.setMode(AppOpsManager.OP_WIFI_SCAN, 10123, "com.facebook.katana", AppOpsManager.MODE_IGNORED);
+		mAppOps.setMode(AppOpsManager.OP_NEIGHBORING_CELLS, 10123, "com.facebook.katana", AppOpsManager.MODE_IGNORED);
+		mAppOps.setMode(AppOpsManager.OP_WAKE_LOCK, 10123, "com.facebook.katana", AppOpsManager.MODE_IGNORED);
+		mAppOps.setMode(AppOpsManager.OP_MONITOR_LOCATION, 10123, "com.facebook.katana", AppOpsManager.MODE_IGNORED);
+		mAppOps.setMode(AppOpsManager.OP_MONITOR_HIGH_POWER_LOCATION, 10123, "com.facebook.katana", AppOpsManager.MODE_IGNORED);
+		mAppOps.setMode(AppOpsManager.OP_CAMERA, 10123, "com.facebook.katana", AppOpsManager.MODE_IGNORED);
+		mAppOps.setMode(AppOpsManager.OP_CALL_PHONE, 10123, "com.facebook.katana", AppOpsManager.MODE_IGNORED);
+		
 		if (savedInstanceState == null) {
 		 AppOpsSummary appopssummary = new AppOpsSummary();
          appopssummary.setArguments(getIntent().getExtras());

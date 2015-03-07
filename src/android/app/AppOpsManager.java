@@ -393,49 +393,49 @@ public class AppOpsManager {
      * This specifies the default mode for each operation.
      */
     private static int[] sOpDefaultMode = new int[] {
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_IGNORED, // OP_WRITE_SMS
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
-            AppOpsManager.MODE_ALLOWED,
+    	AppOpsManager.MODE_ALLOWED, // COARSE_LOCATION
+    	AppOpsManager.MODE_ALLOWED, // FINE_LOCATION
+    	AppOpsManager.MODE_ALLOWED, // GPS
+    	AppOpsManager.MODE_ALLOWED, // VIBRATE
+    	AppOpsManager.MODE_ALLOWED, // READ_CONTACTS
+    	AppOpsManager.MODE_ALLOWED, // WRITE_CONTACTS
+    	AppOpsManager.MODE_ALLOWED, // READ_CALL_LOG
+    	AppOpsManager.MODE_ALLOWED, // WRITE_CALL_LOG
+    	AppOpsManager.MODE_ALLOWED, // READ_CALENDAR
+    	AppOpsManager.MODE_ALLOWED, // WRITE_CALENDAR
+    	AppOpsManager.MODE_ALLOWED, // WIFI_SCAN
+    	AppOpsManager.MODE_ALLOWED, // POST_NOTIFICATION
+    	AppOpsManager.MODE_ALLOWED, // NEIGHBORING_CELLS
+    	AppOpsManager.MODE_ALLOWED, // CALL_PHONE
+    	AppOpsManager.MODE_ALLOWED, // READ_SMS
+    	AppOpsManager.MODE_IGNORED, // WRITE_SMS
+    	AppOpsManager.MODE_ALLOWED, // RECEIVE_SMS
+    	AppOpsManager.MODE_ALLOWED, // RECEIVE_EMERGECY_SMS
+    	AppOpsManager.MODE_ALLOWED, // RECEIVE_MMS
+    	AppOpsManager.MODE_ALLOWED, // RECEIVE_WAP_PUSH
+    	AppOpsManager.MODE_ALLOWED, // SEND_SMS
+    	AppOpsManager.MODE_ALLOWED, // READ_ICC_SMS
+    	AppOpsManager.MODE_ALLOWED, // WRITE_ICC_SMS
+    	AppOpsManager.MODE_ALLOWED, // WRITE_SETTINGS
+    	AppOpsManager.MODE_ALLOWED, // SYSTEM_ALERT_WINDOW
+    	AppOpsManager.MODE_ALLOWED, // ACCESS_NOTIFICATIONS
+    	AppOpsManager.MODE_ALLOWED, // CAMERA
+    	AppOpsManager.MODE_ALLOWED, // RECORD_AUDIO
+    	AppOpsManager.MODE_ALLOWED, // PLAY_AUDIO
+    	AppOpsManager.MODE_ALLOWED, // READ_CLIPBOARD
+    	AppOpsManager.MODE_ALLOWED, // WRITE_CLIPBOARD
+    	AppOpsManager.MODE_ALLOWED, // TAKE_MEDIA_BUTTONS
+    	AppOpsManager.MODE_ALLOWED, // TAKE_AUDIO_FOCUS
+    	AppOpsManager.MODE_ALLOWED, // AUDIO_MASTER_VOLUME
+    	AppOpsManager.MODE_ALLOWED, // AUDIO_VOICE_VOLUME
+    	AppOpsManager.MODE_ALLOWED, // AUDIO_RING_VOLUME
+    	AppOpsManager.MODE_ALLOWED, // AUDIO_MEDIA_VOLUME
+    	AppOpsManager.MODE_ALLOWED, // AUDIO_ALARM_VOLUME
+    	AppOpsManager.MODE_ALLOWED, // AUDIO_NOTIFICATION_VOLUME
+    	AppOpsManager.MODE_ALLOWED, // AUDIO_BLUETOOTH_VOLUME
+    	AppOpsManager.MODE_ALLOWED, // WAKE_LOCK
+    	AppOpsManager.MODE_ALLOWED, // MONITOR_LOCATION
+    	AppOpsManager.MODE_ALLOWED, // MONITOR_HIGH_POWER_LOCATION
     };
 
     /**
@@ -446,9 +446,9 @@ public class AppOpsManager {
      * for whichever app is selected as the current SMS app).
      */
     private static boolean[] sOpDisableReset = new boolean[] {
-            false,
-            false,
-            false,
+            true,
+            true,
+            true,
             false,
             false,
             false,
